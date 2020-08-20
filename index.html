@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Will Taylor</title>
+
+    <link rel="stylesheet" href="styles/output.css" />
+  </head>
+  <body class="font-sans text-lg leading-relaxed">
+    <!-- Navigation -->
+    <div class="bg-primary-blue min-w-full min-h-128 absolute top-0"></div>
+    <div class="bg-primary-blue-translucent text-white sticky top-0">
+      <header class="pt-4 pb-3 px-8 max-w-screen-lg mx-auto z-50">
+        <div class="flex items-center">
+          <a href="#" class="text-2xl font-bold hidden sm:block">
+            Will Taylor
+          </a>
+
+          <nav
+            class="flex flex-1 items-center justify-between min-w-full sm:min-w-0 sm:justify-end list-none pb-1"
+          >
+            <li
+              class="sm:ml-8 px-2 pt-1 cursor-pointer rounded hover:bg-blue-300 hover:shadow-sm"
+            >
+              <a
+                data-scroll
+                href="#projects"
+                onclick="return highlightSection('#projects');"
+                ><span class="hidden sm:inline">🔨</span> Projects</a
+              >
+            </li>
+            <li
+              class="sm:ml-8 px-2 pt-1 cursor-pointer rounded hover:bg-blue-300 hover:shadow-sm"
+            >
+              <a
+                data-scroll
+                href="#about"
+                onclick="return highlightSection('#about');"
+                ><span class="hidden sm:inline">👋</span> About</a
+              >
+            </li>
+            <li
+              class="sm:ml-8 px-2 pt-1 cursor-pointer rounded hover:bg-blue-300 hover:shadow-sm"
+            >
+              <a
+                data-scroll
+                href="#contact"
+                onclick="return highlightSection('#contact');"
+                ><span class="hidden sm:inline">📱</span> Contact</a
+              >
+            </li>
+          </nav>
+        </div>
+      </header>
+    </div>
+
+    <!-- Intro Section -->
+    <section class="text-white overflow-hidden bg-primary-blue">
+      <div class="pb-16">
+        <div class="max-w-screen-lg mx-auto px-8">
+          <div
+            class="flex flex-col md:flex-row md:items-center justify-center py-24 relative"
+          >
+            <!-- https://icons8.com/illustrations/illustration/pale-work-at-home -->
+            <img
+              src="res/work-at-home.png"
+              alt=""
+              class="max-w-2/3 md:max-w-md absolute top-0 left-0 z-0 md:static opacity-75 md:opacity-100"
+            />
+
+            <div class="flex-1 z-10">
+              <h1 class="font-bold text-4xl md:text-6xl shadow-title-blue">
+                Hello World
+              </h1>
+
+              <p class="mb-4">
+                I’m Will, a full-stack developer from the UK 🇬🇧. I create things
+                for the web. On this site you can find out more about me, the
+                things I've made or get in touch.
+              </p>
+
+              <p>
+                Right now, I'm
+                <!-- href="/hire-me" -->
+                <a
+                  class="job-indicator inline-block md:inline rounded bg-green-500 pt-2 pb-1 px-2"
+                  >looking for junior/grad roles.</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <svg
+          class="waves"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          viewBox="0 24 150 28"
+          preserveAspectRatio="none"
+          shape-rendering="auto"
+        >
+          <defs>
+            <path
+              id="gentle-wave"
+              d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"
+            />
+          </defs>
+          <g class="parallax">
+            <use
+              xlink:href="#gentle-wave"
+              x="48"
+              y="0"
+              fill="rgba(255, 255, 255, 0.7)"
+            />
+            <use
+              xlink:href="#gentle-wave"
+              x="48"
+              y="3"
+              fill="rgba(255, 255, 255, 0.5)"
+            />
+            <use
+              xlink:href="#gentle-wave"
+              x="48"
+              y="5"
+              fill="rgba(255, 255, 255, 0.3)"
+            />
+            <use
+              xlink:href="#gentle-wave"
+              x="48"
+              y="7"
+              fill="rgba(255, 255, 255, 1)"
+            />
+          </g>
+        </svg>
+      </div>
+    </section>
+
+    <main class="px-2 md:px-8 text-black">
+      <!-- Tech I use -->
+      <section class="max-w-screen-lg mx-auto my-20 md:mt-32 md:mb-20">
+        <div class="flex flex-col md:max-w-680 ml-auto">
+          <div class="flex items-start md:self-end mb-4 md:mb-0">
+            <img
+              src="res/sribble-arrow-left.png"
+              alt
+              class="pt-3 pr-2 hidden md:inline"
+            />
+            <h2 class="font-cursive">Here's what I enjoy using</h2>
+          </div>
+
+          <div
+            class="border rounded-lg shadow-lg p-4 my-2 grid gap-4 grid-cols-3 sm:grid-cols-4 md:grid-cols-5"
+          >
+            <div class="inline-flex flex-col items-center">
+              <img
+                src="res/tech-icons/icons8-html-5.svg"
+                alt="HTML5"
+                class="max-h-64 min-h-64"
+              />
+              <span>HTML</span>
+            </div>
+            <div class="flex flex-col items-center">
+              <img
+                src="res/tech-icons/icons8-css3.svg"
+                alt="CSS3"
+                class="max-h-64 min-h-64"
+              />
+              <span>CSS</span>
+            </div>
+            <div class="flex flex-col items-center">
+              <img
+                src="res/tech-icons/icons8-javascript.svg"
+                alt="JavaScript"
+                class="max-h-64 min-h-64"
+              />
+              <span>JavaScript</span>
+            </div>
+            <div class="flex flex-col items-center">
+              <img
+                src="res/tech-icons/icons8-java.svg"
+                alt="Java"
+                class="max-h-64 min-h-64"
+              />
+              <span>Java</span>
+            </div>
+            <div class="flex flex-col items-center">
+              <img
+                src="res/tech-icons/icons8-kotlin.svg"
+                alt="Kotlin"
+                class="max-h-64 min-h-64"
+              />
+              <span>Kotlin</span>
+            </div>
+            <div class="flex flex-col items-center">
+              <img
+                src="res/tech-icons/react-logo.svg"
+                alt="React.js"
+                class="max-h-64 min-h-64"
+              />
+              <span>React.js</span>
+            </div>
+            <div class="flex flex-col items-center">
+              <img
+                src="res/tech-icons/icons8-sass.svg"
+                alt="SASS"
+                class="max-h-64 min-h-64"
+              />
+              <span>SASS</span>
+            </div>
+            <div class="flex flex-col items-center">
+              <img
+                src="res/tech-icons/icons8-swift.svg"
+                alt="Swift"
+                class="max-h-64 min-h-64"
+              />
+              <span>Swift</span>
+            </div>
+            <div class="flex flex-col items-center">
+              <img
+                src="res/tech-icons/icons8-graphql.svg"
+                alt="GraphQL"
+                class="max-h-64 min-h-64"
+              />
+              <span>GraphQL</span>
+            </div>
+            <div class="flex flex-col items-center">
+              <img
+                src="res/tech-icons/icons8-amazon-web-services.svg"
+                alt="Amazon Web Services"
+                class="max-h-64 min-h-64"
+              />
+              <span>AWS</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects container -->
+      <section id="projects" class="pt-24 my-20 max-w-screen-lg mx-auto">
+        <div class="flex-2 flex flex-col mr-auto">
+          <div class="flex items-start self-start mb-4 md:mb-0">
+            <h2 class="font-cursive">And here's some of my work</h2>
+            <img
+              src="res/scribble-arrow-right.png"
+              alt
+              class="pt-3 pl-2 hidden md:inline"
+            />
+          </div>
+
+          <ul class="min-w-full">
+            <li
+              class="border rounded-lg shadow-lg p-4 my-2 md:min-w-700 md:flex md:max-w-80 mb-16"
+            >
+              <img
+                src="res/projects/travelhack_logo 1.png"
+                alt="TravelHack logo"
+                class="self-start mb-8 w-full"
+              />
+
+              <div class="md:ml-8">
+                <h3 class="text-3xl font-semibold mb-1">TravelHack</h3>
+                <p class="text-base">
+                  TravelHack was a hackathon for students, run by students.
+                  Working closely with recruitment, a small group of interns
+                  planned and ran this hackathon with the aim of hiring the next
+                  group of EG interns. Aside from organising, I created two
+                  websites. One was a promotional site, and the other was a
+                  infosite to be used throughout the event.
+                </p>
+
+                <!-- <a
+                  href="/projects/travelhack.html"
+                  class="block bg-travelhack-blue text-white px-4 pt-2 pb-1 rounded mt-2 md:max-w-50 text-center ml-auto hover:opacity-75"
+                  >View more</a
+                > -->
+              </div>
+            </li>
+
+            <li
+              class="border rounded-lg shadow-lg p-4 my-2 md:min-w-700 md:flex md:max-w-80 mb-16 ml-auto"
+            >
+              <img
+                src="res/projects/js30-banner.png"
+                alt="#JavaScript30, 30 day vanilla javascript coding challenge"
+                class="self-start mb-8 w-full"
+              />
+
+              <div class="md:ml-8">
+                <h3 class="text-3xl font-semibold mb-1">JavaScript 30</h3>
+                <p class="text-base">
+                  JavaScript 30 is a challenge by
+                  <a
+                    href="https://twitter.com/wesbos"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    class="underline text-link"
+                    >@WesBos</a
+                  >, and you can find the course at
+                  <a
+                    href="https://javascript30.com"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    class="underline text-link"
+                    >javascript30.com</a
+                  >. I completed one challenge a day until day 20, then I
+                  shifted my focus to planning a project ready to return to
+                  university.
+                </p>
+
+                <!-- <a
+                  href="/projects/JavaScript30.html"
+                  class="block bg-wesbos-yellow text-black px-4 pt-2 pb-1 rounded mt-2 md:max-w-50 text-center ml-auto hover:opacity-75"
+                  >View more</a
+                > -->
+              </div>
+            </li>
+
+            <li
+              class="border rounded-lg shadow-lg p-4 my-2 md:min-w-700 md:flex md:max-w-80 mb-16"
+            >
+              <img
+                src="res/projects/solar-system.png"
+                alt="Screenshot of the Earth, with orbiting moon"
+                class="self-start mb-8 w-full"
+              />
+
+              <div class="md:ml-8">
+                <h3 class="text-3xl font-semibold mb-1">The Solar System</h3>
+                <p class="text-base">
+                  No, I didn’t create the solar system. But I did create a model
+                  of it using Three.js. This was part of a second year visual
+                  computing coursework. Although all the velocities are sped up,
+                  they are correct relative to Earth, as are the planet
+                  radiuses.
+                </p>
+
+                <!-- <a
+                  href="/projects/solar-system.html"
+                  class="block bg-solar-system-blue text-white px-4 pt-2 pb-1 rounded mt-2 md:max-w-50 text-center ml-auto hover:opacity-75"
+                  >View more</a
+                > -->
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- About me -->
+      <section
+        id="about"
+        class="pt-24 my-20 my-20 max-w-screen-lg mx-auto flex items-center flex-col-reverse md:flex-row"
+      >
+        <div class="md:mr-12">
+          <h2 class="font-bold text-4xl shadow-title-white">Who am I?</h2>
+          <p>
+            As it says at the top of the page, I’m Will, a computer science
+            student at the
+            <a
+              href="https://www.bath.ac.uk"
+              target="_blank"
+              rel="noreferrer noopener"
+              class="underline text-link"
+              >University of Bath</a
+            >. Alongside coding, my two passions are fitness and music. I love
+            running and going to the gym, and have played the guitar since a
+            young age. I also like to learn as many new things as I can. Right
+            now, the new things are the piano and diving more into front end,
+            accessibility and UI design.
+          </p>
+        </div>
+
+        <img
+          src="res/me.png"
+          alt="Me, in Budapest"
+          class="mb-8 md:mb-0 w-full"
+        />
+      </section>
+
+      <!-- How to get in touch -->
+      <section
+        id="contact"
+        class="pt-24 max-w-screen-lg mx-auto flex items-center my-20 relative"
+      >
+        <img
+          src="res/thumbs-up.png"
+          alt=""
+          class="absolute top-0 right-0 z-0 max-w-40 -translate-y-64 opacity-75 md:opacity-100 md:static md:translate-y-0"
+        />
+
+        <div class="md:ml-12 z-10">
+          <h2 class="font-bold text-4xl shadow-title-white">
+            How to get in touch
+          </h2>
+          <p class="mt-2 mb-4">
+            Getting in touch is easy - just use the links below. I'm currently
+            based in Bath while I finish my degree, if you’re in the area let’s
+            grab a coffee - it’s on me.
+          </p>
+
+          <ul class="inline-flex my-2">
+            <li class="m-2 mx-4">
+              <a
+                href="https://twitter.com/0xWill"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                <img
+                  src="res/socials/Twitter_Logo_Blue 1.png"
+                  alt="Twitter"
+                  class="max-h-32"
+              /></a>
+            </li>
+            <li class="m-2 mx-4">
+              <a
+                href="mailto:will_taylor13@outlook.com"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                <img
+                  src="res/socials/icons8-new-post-100 1.png"
+                  alt="Email"
+                  class="max-h-32"
+              /></a>
+            </li>
+            <li class="m-2 mx-4">
+              <a
+                href="https://github.com/witaylor"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                <img
+                  src="res/socials/GitHub-Mark-120px-plus 1.png"
+                  alt="GitHub"
+                  class="max-h-32"
+              /></a>
+            </li>
+            <li class="m-2 mx-4">
+              <a
+                href="https://www.linkedin.com/in/william-taylor1/"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                <img
+                  src="res/socials/LI-In-Bug 1.png"
+                  alt="LinkedIn"
+                  class="max-h-32"
+              /></a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-gray-100 pt-10 pb-2 text-black px-1 lg:px-8">
+      <div class="max-w-screen-lg mx-auto">
+        <div
+          class="flex flex-col lg:flex-row items-center justify-center lg:px-4"
+        >
+          <!-- <a
+            href="/hire-me"
+            class="inline-block text-center flex-1 underline text-link mb-4 lg:mb-0"
+            >Hire me</a
+          > -->
+
+          <div class="flex-1 text-center mb-4 lg:mb-0 lg:px-4">
+            <span class="inline-block"
+              >All icons and images are from Icons8.</span
+            >
+            <!-- <a href="/attribution" class="inline-block underline text-link"
+              >Click here for a list of links.</a
+            > -->
+          </div>
+        </div>
+
+        <span class="block text-center mt-0 lg:mt-12 text-gray-500"
+          >© Copyright 2020, Will&nbsp;Taylor</span
+        >
+      </div>
+    </footer>
+  </body>
+
+  <!-- Smooth Scroll -->
+  <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15/dist/smooth-scroll.polyfills.min.js"></script>
+  <script src="scripts/index.js"></script>
+</html>
