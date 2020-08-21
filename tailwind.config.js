@@ -1,5 +1,5 @@
 module.exports = {
-  purge: [],
+  purge: ['./**/*.html'],
   theme: {
     backgroundColor: (theme) => ({
       ...theme('colors'),
