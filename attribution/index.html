@@ -3,11 +3,365 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Attribution || Will Taylor</title>
 
     <link rel="stylesheet" href="/styles/output.css" />
   </head>
-  <body>
-    <h1 class="text-5xl">Link Attribution</h1>
+  <body class="text-black">
+    <div class="bg-primary-blue text-white sticky top-0 z-50">
+      <header class="pt-4 pb-3 px-8 max-w-screen-lg mx-auto flex items-center">
+        <a href="/" class="text-2xl font-bold hidden sm:block">
+          Will Taylor
+        </a>
+
+        <nav
+          class="flex flex-1 items-center justify-between min-w-full sm:min-w-0 sm:justify-end list-none pb-1"
+        >
+          <li
+            class="sm:ml-8 px-2 pt-1 cursor-pointer rounded hover:bg-blue-300 hover:shadow-sm"
+          >
+            <a href="/"><span class="hidden sm:inline">🏠</span> Home</a>
+          </li>
+          <li
+            class="sm:ml-8 px-2 pt-1 cursor-pointer rounded hover:bg-blue-300 hover:shadow-sm"
+          >
+            <a href="/hire-me" onclick="return highlightSection('#about');"
+              ><span class="hidden sm:inline">👨‍💻</span> Hire me</a
+            >
+          </li>
+        </nav>
+      </header>
+    </div>
+
+    <main class="pt-4 pb-3 px-8 max-w-screen-lg mx-auto">
+      <h1 class="text-3xl font-bold">Attribution</h1>
+
+      <section class="relative">
+        <!-- <img
+          src="/res/attribution/icon-landing.png"
+          alt="Icons8 landing page"
+          class="object-cover max-w-full rounded-lg border"
+        /> -->
+        <!-- Icons -->
+        <div class="my-4">
+          <h2 class="text-xl underline">Icons</h2>
+          <span class="block">
+            The following icons are from
+            <a
+              href="https://icons8.com"
+              target="_blank"
+              rel="noreferrer noopener"
+              class="underline text-link"
+              >Icons8</a
+            >.
+          </span>
+          <div class="my-4 grid grid-cols-1 md:grid-cols-2 gap-2">
+            <!-- HTML -->
+            <div
+              class="flex items-center bg-gray-100 rounded-lg px-2 pb-1 pt-2 my-1"
+            >
+              <img
+                src="/res/tech-icons/icons8-html-5.svg"
+                alt="HTML5"
+                class="max-h-64 min-h-64 mr-4"
+              />
+              <div>
+                <h3 class="font-heavy">HTML</h3>
+                <a
+                  href="https://icons8.com/icon/20909/html-5"
+                  class="block text-link underline cursor-pointer"
+                  >https://icons8.com/icon/20909/html-5
+                </a>
+              </div>
+            </div>
+            <!-- CSS -->
+            <div
+              class="flex items-center bg-gray-100 rounded-lg px-2 pb-1 pt-2 my-1"
+            >
+              <img
+                src="/res/tech-icons/icons8-css3.svg"
+                alt="CSS3"
+                class="max-h-64 min-h-64 mr-4"
+              />
+              <div>
+                <h3>CSS</h3>
+                <a
+                  href="https://icons8.com/icon/21278/css3"
+                  class="block text-link underline cursor-pointer"
+                  >https://icons8.com/icon/21278/css3
+                </a>
+              </div>
+            </div>
+            <!-- JavaScript -->
+            <div
+              class="flex items-center bg-gray-100 rounded-lg px-2 pb-1 pt-2 my-1"
+            >
+              <img
+                src="/res/tech-icons/icons8-javascript.svg"
+                alt="JavaScript"
+                class="max-h-64 min-h-64 mr-4"
+              />
+              <div>
+                <h3>JavaScript</h3>
+                <a
+                  href="https://icons8.com/icon/108784/javascript"
+                  class="block text-link underline cursor-pointer"
+                  >https://icons8.com/icon/108784/javascript
+                </a>
+              </div>
+            </div>
+            <!-- Java -->
+            <div
+              class="flex items-center bg-gray-100 rounded-lg px-2 pb-1 pt-2 my-1"
+            >
+              <img
+                src="/res/tech-icons/icons8-java.svg"
+                alt="Java"
+                class="max-h-64 min-h-64 mr-4"
+              />
+              <div>
+                <h3>Java</h3>
+                <a
+                  href="https://icons8.com/icon/13679/java"
+                  class="block text-link underline cursor-pointer"
+                  >https://icons8.com/icon/13679/java
+                </a>
+              </div>
+            </div>
+            <!-- Kotlin -->
+            <div
+              class="flex items-center bg-gray-100 rounded-lg px-2 pb-1 pt-2 my-1"
+            >
+              <img
+                src="/res/tech-icons/icons8-kotlin.svg"
+                alt="Kotlin"
+                class="max-h-64 min-h-64 mr-4"
+              />
+              <div>
+                <h3>Kotlin</h3>
+                <a
+                  href="https://icons8.com/icon/ZoxjA0jZDdFZ/kotlin"
+                  class="block text-link underline cursor-pointer"
+                  >https://icons8.com/icon/ZoxjA0jZDdFZ/kotlin
+                </a>
+              </div>
+            </div>
+            <!-- React.js -->
+            <div
+              class="flex items-center bg-gray-100 rounded-lg px-2 pb-1 pt-2 my-1"
+            >
+              <img
+                src="/res/tech-icons/react-logo.svg"
+                alt="React.js"
+                class="max-h-64 min-h-64 mr-4 max-w-64"
+              />
+              <div>
+                <h3>React.js</h3>
+                <a
+                  href="https://icons8.com/icon/123603/react-native"
+                  class="block text-link underline cursor-pointer"
+                  >https://icons8.com/icon/123603/react-native
+                </a>
+              </div>
+            </div>
+            <!-- SASS-->
+            <div
+              class="flex items-center bg-gray-100 rounded-lg px-2 pb-1 pt-2 my-1"
+            >
+              <img
+                src="/res/tech-icons/icons8-sass.svg"
+                alt="SASS"
+                class="max-h-64 min-h-64 mr-4 max-w-64"
+              />
+              <div>
+                <h3>SASS</h3>
+                <a
+                  href="https://icons8.com/icon/QBqFNfPPB2Kx/sass"
+                  class="block text-link underline cursor-pointer"
+                  >https://icons8.com/icon/QBqFNfPPB2Kx/sass
+                </a>
+              </div>
+            </div>
+            <!-- Swift-->
+            <div
+              class="flex items-center bg-gray-100 rounded-lg px-2 pb-1 pt-2 my-1"
+            >
+              <img
+                src="/res/tech-icons/icons8-swift.svg"
+                alt="Swift"
+                class="max-h-64 min-h-64 mr-4 max-w-64"
+              />
+              <div>
+                <h3>Swift</h3>
+                <a
+                  href="https://icons8.com/icon/24465/swift"
+                  class="block text-link underline cursor-pointer"
+                  >https://icons8.com/icon/24465/swift
+                </a>
+              </div>
+            </div>
+            <!-- GraphQL-->
+            <div
+              class="flex items-center bg-gray-100 rounded-lg px-2 pb-1 pt-2 my-1"
+            >
+              <img
+                src="/res/tech-icons/icons8-graphql.svg"
+                alt="Swift"
+                class="max-h-64 min-h-64 mr-4 max-w-64"
+              />
+              <div>
+                <h3>GraphQL</h3>
+                <a
+                  href="https://icons8.com/icon/zdI5E8moxhs-/graphql"
+                  class="block text-link underline cursor-pointer"
+                  >https://icons8.com/icon/zdI5E8moxhs-/graphql
+                </a>
+              </div>
+            </div>
+            <!-- AWS -->
+            <div
+              class="flex items-center bg-gray-100 rounded-lg px-2 pb-1 pt-2 my-1"
+            >
+              <img
+                src="/res/tech-icons/icons8-amazon-web-services.svg"
+                alt="Swift"
+                class="max-h-64 min-h-64 mr-4 max-w-64"
+              />
+              <div>
+                <h3>Amazon Web Services</h3>
+                <a
+                  href="https://icons8.com/icon/33039/amazon-web-services"
+                  class="block text-link underline cursor-pointer"
+                  >https://icons8.com/icon/33039/amazon-web-services
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <span class="block mt-6 mb-2">
+            The social media icons are from their respective site's brand
+            guidelines.
+          </span>
+          <span class="block my-2">
+            Email icon from
+            <a
+              href="https://thenounproject.com/search/?q=email&i=2817901"
+              target="_blank"
+              rel="noreferrer noopener"
+              class="underline text-link"
+              >The Noun Project</a
+            >.
+          </span>
+        </div>
+
+        <!-- Illustrations -->
+        <div class="my-16">
+          <h2 class="text-xl underline">Illustrations</h2>
+          <span class="block">
+            All illustrations are from
+            <a
+              href="https://icons8.com/illustrations"
+              target="_blank"
+              rel="noreferrer noopener"
+              class="underline text-link"
+              >Ouch</a
+            >.
+          </span>
+
+          <ul>
+            <li class="my-4 border-l-4 pl-2 border-gray-700">
+              <h3>Work at Home</h3>
+              <a
+                href="https://icons8.com/illustrations/illustration/pale-work-at-home"
+                class="text-link underline block"
+                >https://icons8.com/illustrations/illustration/pale-work-at-home</a
+              >
+            </li>
+            <li class="my-4 border-l-4 pl-2 border-gray-700">
+              <h3>Message Sent</h3>
+              <a
+                href="https://icons8.com/illustrations/illustration/mirage-message-sent"
+                class="text-link underline block"
+                >https://icons8.com/illustrations/illustration/mirage-message-sent</a
+              >
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <div class="min-h-screen"></div>
+      <div class="min-h-screen">
+        <p>
+          <span class="italic">Almost</span> all of the icons and images used on
+          this site are from
+          <a
+            href="https://icons8.com"
+            target="_blank"
+            rel="noreferrer noopener"
+            class="underline text-link"
+            >Icons8</a
+          >. Specifically, the illustrations are from
+          <a
+            href="https://icons8.com/illustrations"
+            target="_blank"
+            rel="noreferrer noopener"
+            class="underline text-link"
+            ><img
+              src="/res/attribution/ouch-landing.png"
+              alt="Ouch's landing page"
+              class="object-cover max-w-full rounded-lg border" /></a
+          >.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2">
+          <div>
+            <span
+              >All icons are from
+              <a
+                href="https://icons8.com"
+                target="_blank"
+                rel="noreferrer noopener"
+                class="underline text-link"
+                >Icons8</a
+              >.</span
+            >
+
+            <a
+              href="https://icons8.com/illustrations"
+              target="_blank"
+              rel="noreferrer noopener"
+              class="underline text-link"
+              ><img
+                src="/res/attribution/ouch-landing.png"
+                alt="Ouch's landing page"
+                class="object-cover max-w-full rounded-lg border"
+            /></a>
+          </div>
+          <div>
+            <span
+              >All icons are from
+              <a
+                href="https://icons8.com"
+                target="_blank"
+                rel="noreferrer noopener"
+                class="underline text-link"
+                >Icons8</a
+              >.</span
+            >
+
+            <a
+              href="https://icons8.com/illustrations"
+              target="_blank"
+              rel="noreferrer noopener"
+              class="underline text-link"
+              ><img
+                src="/res/attribution/ouch-landing.png"
+                alt="Ouch's landing page"
+                class="object-cover max-w-full rounded-lg border"
+            /></a>
+          </div>
+        </div>
+      </div>
+    </main>
   </body>
 </html>

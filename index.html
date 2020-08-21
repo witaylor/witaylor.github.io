@@ -10,8 +10,8 @@
   <body class="font-sans text-lg leading-relaxed">
     <!-- Navigation -->
     <div class="bg-primary-blue min-w-full min-h-128 absolute top-0"></div>
-    <div class="bg-primary-blue-translucent text-white sticky top-0">
-      <header class="pt-4 pb-3 px-8 max-w-screen-lg mx-auto z-50">
+    <div class="bg-primary-blue-translucent text-white sticky top-0 z-50">
+      <header class="pt-4 pb-3 px-8 max-w-screen-lg mx-auto">
         <div class="flex items-center">
           <a href="#" class="text-2xl font-bold hidden sm:block">
             Will Taylor
@@ -24,7 +24,6 @@
               class="sm:ml-8 px-2 pt-1 cursor-pointer rounded hover:bg-blue-300 hover:shadow-sm"
             >
               <a
-                data-scroll
                 href="#projects"
                 onclick="return highlightSection('#projects');"
                 ><span class="hidden sm:inline">🔨</span> Projects</a
@@ -33,20 +32,14 @@
             <li
               class="sm:ml-8 px-2 pt-1 cursor-pointer rounded hover:bg-blue-300 hover:shadow-sm"
             >
-              <a
-                data-scroll
-                href="#about"
-                onclick="return highlightSection('#about');"
+              <a href="#about" onclick="return highlightSection('#about');"
                 ><span class="hidden sm:inline">👋</span> About</a
               >
             </li>
             <li
               class="sm:ml-8 px-2 pt-1 cursor-pointer rounded hover:bg-blue-300 hover:shadow-sm"
             >
-              <a
-                data-scroll
-                href="#contact"
-                onclick="return highlightSection('#contact');"
+              <a href="#contact" onclick="return highlightSection('#contact');"
                 ><span class="hidden sm:inline">📱</span> Contact</a
               >
             </li>
@@ -81,12 +74,24 @@
               </p>
 
               <p>
-                Right now, I'm
-                <!-- href="/hire-me" -->
-                <a
-                  class="job-indicator inline-block md:inline rounded bg-green-500 pt-2 pb-1 px-2"
-                  >looking for junior/grad roles.</a
+                <!-- Looking for new roles -->
+                Right now,<a
+                  href="resume"
+                  class="job-indicator inline-block md:inline rounded bg-job-green pt-2 pb-1 px-2"
+                  >I'm looking for new roles.</a
                 >
+
+                <!-- Open to offers but not looking -->
+                <!-- <a
+                  class="job-indicator inline-block md:inline rounded pt-2 pb-1 px-2"
+                  >open to offers but not actively looking for a new role.</a
+                > -->
+
+                <!-- Not open to job offers -->
+                <!-- <a
+                  class="job-indicator inline-block md:inline rounded bg-job-red pt-2 pb-1 px-2"
+                  >I'm not open to job offers.</a
+                > -->
               </p>
             </div>
           </div>
@@ -152,6 +157,7 @@
           </div>
 
           <div
+            data-scroll
             class="border rounded-lg shadow-lg p-4 my-2 grid gap-4 grid-cols-3 sm:grid-cols-4 md:grid-cols-5"
           >
             <div class="inline-flex flex-col items-center">
@@ -251,13 +257,75 @@
           </div>
 
           <ul class="min-w-full">
-            <li
+            <!-- <li
+              data-scroll
               class="border rounded-lg shadow-lg p-4 my-2 md:min-w-700 md:flex md:max-w-80 mb-16"
             >
               <img
                 src="res/projects/travelhack_logo 1.png"
                 alt="TravelHack logo"
                 class="self-start mb-8 w-full"
+              />
+
+              <div class="md:ml-8">
+                <h3 class="text-3xl font-semibold mb-1">
+                  Lawrence Prosser & Sons
+                </h3>
+                <p class="text-base">
+                  A website for Lawrence Prosser & Sons. Designed to be a source
+                  of information and contact details. Designed in Figma, with
+                  several iterations before being signed off by the client. etc
+                  etc more bullshit.
+                </p>
+
+                <a
+                  href="/projects/travelhack.html"
+                  class="block bg-travelhack-blue text-white px-4 pt-2 pb-1 rounded mt-2 md:max-w-50 text-center ml-auto hover:opacity-75"
+                  >View more</a
+                >
+              </div>
+            </li> -->
+            <li
+              data-scroll
+              class="border rounded-lg shadow-lg p-4 my-2 md:min-w-700 md:flex md:max-w-80 mb-16 ml-auto"
+            >
+              <img
+                src="res/projects/portfolio.png"
+                alt="This portfolio website"
+                class="self-start mb-8 w-full max-w-256 rounded"
+              />
+
+              <div class="md:ml-8">
+                <h3 class="text-3xl font-semibold mb-1">This portfolio</h3>
+                <p class="text-base">
+                  The website you're viewing now. A multi-page site initially
+                  designed in Figma, and then built using plain HTML, with
+                  <a
+                    href="https://tailwindcss.com"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    class="underline text-link"
+                    >Tailwind.css</a
+                  >
+                  and a little JavaScript. All animations respect the user's
+                  reduced motion preferences.
+                </p>
+
+                <!-- <a
+                  href="/projects/JavaScript30.html"
+                  class="block bg-wesbos-yellow text-black px-4 pt-2 pb-1 rounded mt-2 md:max-w-50 text-center ml-auto hover:opacity-75"
+                  >View the code</a
+                > -->
+              </div>
+            </li>
+            <li
+              data-scroll
+              class="border rounded-lg shadow-lg p-4 my-2 md:min-w-700 md:flex md:max-w-80 mb-16"
+            >
+              <img
+                src="res/projects/travelhack_logo 1.png"
+                alt="TravelHack logo"
+                class="self-start mb-8 w-full max-w-256 rounded"
               />
 
               <div class="md:ml-8">
@@ -280,51 +348,42 @@
             </li>
 
             <li
+              data-scroll
               class="border rounded-lg shadow-lg p-4 my-2 md:min-w-700 md:flex md:max-w-80 mb-16 ml-auto"
             >
               <img
-                src="res/projects/js30-banner.png"
+                src="res/projects/pt-test-screenshot.png"
                 alt="#JavaScript30, 30 day vanilla javascript coding challenge"
-                class="self-start mb-8 w-full"
+                class="self-start mb-8 w-full max-w-256 rounded"
               />
 
               <div class="md:ml-8">
-                <h3 class="text-3xl font-semibold mb-1">JavaScript 30</h3>
+                <h3 class="text-3xl font-semibold mb-1">PostureDetect</h3>
                 <p class="text-base">
-                  JavaScript 30 is a challenge by
-                  <a
-                    href="https://twitter.com/wesbos"
-                    target="_blank"
-                    rel="noreferrer noopener"
-                    class="underline text-link"
-                    >@WesBos</a
-                  >, and you can find the course at
-                  <a
-                    href="https://javascript30.com"
-                    target="_blank"
-                    rel="noreferrer noopener"
-                    class="underline text-link"
-                    >javascript30.com</a
-                  >. I completed one challenge a day until day 20, then I
-                  shifted my focus to planning a project ready to return to
-                  university.
+                  This is an initial exploration into a potential idea for my
+                  final year university project. It's an app that will allow
+                  users to upload a photo of themselves and then receive a
+                  detailed analysis of their posture. <br />
+                  Right now, you can upload photos and see a estimated skeleton
+                  drawn on to the image, but there is no posture analysis yet.
                 </p>
 
-                <!-- <a
-                  href="/projects/JavaScript30.html"
-                  class="block bg-wesbos-yellow text-black px-4 pt-2 pb-1 rounded mt-2 md:max-w-50 text-center ml-auto hover:opacity-75"
+                <a
+                  href="https://willtaylor.codes/pt-test/"
+                  class="block bg-job-red text-black px-4 pt-2 pb-1 rounded mt-2 md:max-w-50 text-center ml-auto hover:opacity-75"
                   >View more</a
-                > -->
+                >
               </div>
             </li>
 
             <li
+              data-scroll
               class="border rounded-lg shadow-lg p-4 my-2 md:min-w-700 md:flex md:max-w-80 mb-16"
             >
               <img
                 src="res/projects/solar-system.png"
                 alt="Screenshot of the Earth, with orbiting moon"
-                class="self-start mb-8 w-full"
+                class="self-start mb-8 w-full max-w-256 rounded"
               />
 
               <div class="md:ml-8">
@@ -351,7 +410,7 @@
       <!-- About me -->
       <section
         id="about"
-        class="pt-24 my-20 my-20 max-w-screen-lg mx-auto flex items-center flex-col-reverse md:flex-row"
+        class="pt-24 my-20 max-w-screen-lg mx-auto flex items-center flex-col-reverse md:flex-row"
       >
         <div class="md:mr-12">
           <h2 class="font-bold text-4xl shadow-title-white">Who am I?</h2>
@@ -378,6 +437,20 @@
           class="mb-8 md:mb-0 w-full"
         />
       </section>
+
+      <!-- Work experience  -->
+      <!-- <section
+        id="about"
+        class="pt-24 my-20 max-w-screen-lg mx-auto flex items-center flex-col-reverse md:flex-row"
+      >
+        <h2>Where I've worked</h2>
+        <div
+          data-scroll
+          class="border rounded-lg shadow-lg p-4 my-2 md:min-w-700 md:flex md:max-w-80 mb-16 ml-auto"
+        >
+          Expedia Group
+        </div>
+      </section> -->
 
       <!-- How to get in touch -->
       <section
@@ -420,7 +493,7 @@
                 rel="noreferrer noopener"
               >
                 <img
-                  src="res/socials/icons8-new-post-100 1.png"
+                  src="res/socials/noun_Email_2817901.svg"
                   alt="Email"
                   class="max-h-32"
               /></a>
@@ -459,19 +532,16 @@
         <div
           class="flex flex-col lg:flex-row items-center justify-center lg:px-4"
         >
-          <!-- <a
-            href="/hire-me"
+          <a
+            href="/resume"
             class="inline-block text-center flex-1 underline text-link mb-4 lg:mb-0"
-            >Hire me</a
-          > -->
+            >View my resume</a
+          >
 
           <div class="flex-1 text-center mb-4 lg:mb-0 lg:px-4">
-            <span class="inline-block"
-              >All icons and images are from Icons8.</span
+            <a href="/attribution" class="block underline text-link"
+              >Illustration & icon attribution.</a
             >
-            <!-- <a href="/attribution" class="inline-block underline text-link"
-              >Click here for a list of links.</a
-            > -->
           </div>
         </div>
 
@@ -484,5 +554,8 @@
 
   <!-- Smooth Scroll -->
   <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15/dist/smooth-scroll.polyfills.min.js"></script>
+  <!-- Scroll Out -->
+  <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
+
   <script src="scripts/index.js"></script>
 </html>

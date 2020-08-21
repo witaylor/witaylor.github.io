@@ -165,3 +165,27 @@ html {
     font-size: 24px;
   }
 }
+
+/* WAVE ANIM: REDUCED MOTION */
+
+@media (prefers-reduced-motion) {
+  .parallax > use {
+    animation: none;
+  }
+}
+
+/* SCROLL ANIMATIONS */
+
+[data-scroll] {
+  transition: all 1s;
+}
+
+[data-scroll='in'] {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+[data-scroll='out'] {
+  opacity: 0;
+  transform: translateY(100px);
+}

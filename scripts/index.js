@@ -35,4 +35,8 @@ function highlightSection(sectionId = '#') {
   }
 }
 
+ScrollOut({
+  once: true,
+  threshold: 0.33,
+});
 var scroll = new SmoothScroll('a[href*="#"]');
