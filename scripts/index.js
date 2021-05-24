@@ -35,8 +35,34 @@ function highlightSection(sectionId = '#') {
   }
 }
 
+function addClassOnScroll(element, className, scrollThreshold) {
+  const pageScrollTop =
+    window.pageYOffset ||
+    (document.documentElement || document.body.parentNode || document.body)
+      .scrollTop;
+
+  if (
+    pageScrollTop > scrollThreshold &&
+    !element.classList.contains(className)
+  ) {
+    element.classList.add(className);
+  } else if (
+    pageScrollTop < scrollThreshold &&
+    element.classList.contains(className)
+  ) {
+    element.classList.remove(className);
+  }
+}
+
+// Smooth scrolling on nav click
 ScrollOut({
   once: true,
   threshold: 0.33,
 });
 var scroll = new SmoothScroll('a[href*="#"]');
+
+// Add shadow scroll listener
+document.addEventListener('scroll', () => {
+  const header = document.getElementById('nav-container');
+  addClassOnScroll(header, 'shadow', 20);
+});

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dissertation || Will Taylor</title>
+
+    <link rel="stylesheet" href="/styles/output.css" />
+  </head>
+  <body class="font-sans text-lg leading-relaxed">
+    <div class="bg-primary-blue text-white sticky top-0 z-50">
+      <header class="pt-4 pb-3 px-8 max-w-screen-lg mx-auto">
+        <div class="flex items-center">
+          <a href="/#" class="text-2xl font-bold hidden sm:block">
+            Will Taylor
+          </a>
+
+          <nav
+            class="
+              flex flex-1
+              items-center
+              justify-between
+              min-w-full
+              sm:min-w-0
+              sm:justify-end
+              list-none
+              pb-1
+            "
+          >
+            <li
+              class="
+                sm:ml-8
+                px-2
+                pt-1
+                cursor-pointer
+                rounded
+                hover:bg-blue-300
+                hover:shadow-sm
+              "
+            >
+              <a
+                href="/#projects"
+                onclick="return highlightSection('#projects');"
+                ><span class="hidden sm:inline">🔨</span> Projects</a
+              >
+            </li>
+            <li
+              class="
+                sm:ml-8
+                px-2
+                pt-1
+                cursor-pointer
+                rounded
+                hover:bg-blue-300
+                hover:shadow-sm
+              "
+            >
+              <a href="/#about" onclick="return highlightSection('#about');"
+                ><span class="hidden sm:inline">👋</span> About</a
+              >
+            </li>
+            <li
+              class="
+                sm:ml-8
+                px-2
+                pt-1
+                cursor-pointer
+                rounded
+                hover:bg-blue-300
+                hover:shadow-sm
+              "
+            >
+              <a href="/#contact" onclick="return highlightSection('#contact');"
+                ><span class="hidden sm:inline">📱</span> Contact</a
+              >
+            </li>
+          </nav>
+        </div>
+      </header>
+    </div>
+
+    <main class="px-8 pt-8 pb-40 max-w-screen-lg mx-auto">
+      <img
+        src="/res/projects/diss/stretch-banner.svg"
+        alt="A group photo of TravelHack 2019, with organisers, volunteers and the hackers."
+        class=""
+      />
+
+      <h1 class="text-3xl font-bold mt-8">Stretch - My Dissertation Project</h1>
+
+      <p>
+        My dissertation project aimed to answer the research question:
+        <span class="italic">
+          can technology be used to prevent poor posture while working from
+          non-traditional workspaces?
+        </span>
+      </p>
+
+      <p class="mt-2">
+        You can read the full dissertation
+        <a
+          href="/res/projects/diss/Dissertation.pdf"
+          target="_blank"
+          class="underline text-link"
+        >
+          here</a
+        >. But, this is the abstract:
+      </p>
+
+      <p class="mt-2 italic px-8 md:px-16 mx-auto">
+        "The number of people working remotely has been steadily rising, with
+        the recent coronavirus pandemic (COVID-19) accelerating this growth. As
+        many are forced to work from home for the first time, they are doing so
+        from non-traditional workspaces such as sofas, beds and kitchen stools.
+        These workspaces present several ergonomic challenges and can lead to
+        discomfort as a result of poor sitting posture. Stretching and frequent
+        movement breaks from sitting are vital to maintaining a good and
+        pain-free posture that can prevent discomfort. This project looks at the
+        role technology has in preventing this postural discomfort and aims to
+        produce an application to provide users with daily stretching routines
+        to encourage the breaking of sitting periods with movement and stretches
+        designed to prevent discomfort.
+      </p>
+      <p class="mt-2 italic px-8 md:px-16 mx-auto">
+        To accomplish this, a review of the current state of the art is
+        conducted, and interviews with interested health professionals are
+        completed, which provide the basis for the requirements specification
+        for a suitable app. A detailed summary of the produced iOS application
+        is included, which is based on these ideas, followed by an empirical
+        evaluation to determine its usability and effectiveness at reducing
+        discomfort. The results of this evaluation suggest that the developed
+        app has the potential to reduce the discomfort levels of users. The
+        evaluation also identified the demand for such an app, with participants
+        stating they would like to continue to use it. This project concludes by
+        outlining potential future improvements to the app, and suggestions on
+        an improved study provide a conclusive insight into its effectiveness."
+      </p>
+
+      <h2 class="text-2xl font-bold mt-12">The iOS App</h2>
+
+      <p class="mt-2">
+        As part of my dissertation project, I created
+        <span class="italic">Stretch</span> - a native iOS app written in Swift
+        and SwiftUI. The aim of the app is to provide users with a daily routine
+        of stretches designed to improve posture and reduce discomfort.
+        Empirical user studies showed the intial signs that the app was
+        effective, and the design was well-reviewed. One user even stated that
+        they "<span class="italic">would be happy to pay for it</span>"!
+      </p>
+
+      <p class="mt-2">
+        The full source code for the app is viewable
+        <a
+          href="https://github.com/witaylor/Stretch-iOS"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="underline text-link"
+          >on GitHub</a
+        >.
+      </p>
+    </main>
+  </body>
+</html>

@@ -5,12 +5,15 @@
   "main": "index.js",
   "scripts": {
     "build:css": "npx tailwindcss build styles/tailwind.css -o styles/output.css",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build:html": "html-minifier --input-dir ./ --output-dir dist --file-ext html --remove-comments --collapse-whitespace --minify-js true --minify-css true"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "tailwindcss": "^1.6.2"
+  },
+  "devDependencies": {
+    "html-minifier": "^4.0.0"
   }
 }

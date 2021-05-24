@@ -13,6 +13,8 @@ module.exports = {
       'travelhack-blue': '#55AFE6',
       'wesbos-yellow': '#FFC600',
       'solar-system-blue': '#213769',
+      // Work
+      'expedia-group-blue': '#000099',
     }),
     textColor: (theme) => ({
       ...theme('colors'),
@@ -31,7 +33,17 @@ module.exports = {
         '"Helvetica Neue"',
         'sans-serif',
       ],
-      cursive: ['"Gloria Hallelujah"', 'cursive'],
+      cursive: [
+        '"Gloria Hallelujah"',
+        '"Josefin Sans"',
+        'Roboto',
+        'Oxygen',
+        'Ubuntu',
+        'Cantarell',
+        '"Open Sans"',
+        '"Helvetica Neue"',
+        'sans-serif',
+      ],
     },
     extend: {
       flex: {
@@ -48,6 +60,7 @@ module.exports = {
         '50': '50%',
         '2/3': '66.66%',
         '64': '64px',
+        '128': '128px',
         '256': '256px',
         '80': '80%',
         '680': '680px',
@@ -61,6 +74,12 @@ module.exports = {
         '110': '110%',
         '700': '700px',
         '1024': '1024px',
+      },
+      top: {
+        '50': '50%',
+      },
+      spacing: {
+        '1/1': '100%',
       },
     },
   },
