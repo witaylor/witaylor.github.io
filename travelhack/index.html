@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TravelHack || Will Taylor</title>
+
+    <link rel="stylesheet" href="/styles/output.css" />
+  </head>
+  <body class="font-sans text-lg leading-relaxed">
+    <div class="bg-primary-blue text-white sticky top-0 z-50">
+      <header class="pt-4 pb-3 px-8 max-w-screen-lg mx-auto">
+        <div class="flex items-center">
+          <a href="/#" class="text-2xl font-bold hidden sm:block">
+            Will Taylor
+          </a>
+
+          <nav
+            class="
+              flex flex-1
+              items-center
+              justify-between
+              min-w-full
+              sm:min-w-0
+              sm:justify-end
+              list-none
+              pb-1
+            "
+          >
+            <li
+              class="
+                sm:ml-8
+                px-2
+                pt-1
+                cursor-pointer
+                rounded
+                hover:bg-blue-300
+                hover:shadow-sm
+              "
+            >
+              <a
+                href="/#projects"
+                onclick="return highlightSection('#projects');"
+                ><span class="hidden sm:inline">🔨</span> Projects</a
+              >
+            </li>
+            <li
+              class="
+                sm:ml-8
+                px-2
+                pt-1
+                cursor-pointer
+                rounded
+                hover:bg-blue-300
+                hover:shadow-sm
+              "
+            >
+              <a href="/#about" onclick="return highlightSection('#about');"
+                ><span class="hidden sm:inline">👋</span> About</a
+              >
+            </li>
+            <li
+              class="
+                sm:ml-8
+                px-2
+                pt-1
+                cursor-pointer
+                rounded
+                hover:bg-blue-300
+                hover:shadow-sm
+              "
+            >
+              <a href="/#contact" onclick="return highlightSection('#contact');"
+                ><span class="hidden sm:inline">📱</span> Contact</a
+              >
+            </li>
+          </nav>
+        </div>
+      </header>
+    </div>
+
+    <main class="px-8 pt-8 pb-24 max-w-screen-lg mx-auto">
+      <img
+        src="/res/projects/travelhack/th-group-photo.jpg"
+        alt="A group photo of TravelHack 2019, with organisers, volunteers and the hackers."
+        class="rounded-lg"
+      />
+
+      <div class="max-w-680 mx-auto mt-8">
+        <h1 class="text-3xl font-bold">TravelHack</h1>
+        <p class="my-2">
+          TravelHack is a Expedia Group (EG) hackathon, organised and run by
+          interns, for students. The main target group for participants was
+          students who had applied to EG for an internship. There were two core
+          ideas behind the running of TravelHack;
+        </p>
+        <ol class="list-decimal pl-6 my-4">
+          <li>
+            Give people the opportunity to become more familiar with Expedia
+            Group and their offices in London.
+          </li>
+          <li>
+            Allow recruiters and managers to see potential candidates in an
+            almost real-world work environment, and not just an interview.
+          </li>
+        </ol>
+        <p class="my-2">
+          Alongside helping with organisational and planning tasks, I also
+          designed and created two websites for TravelHack. One was used before
+          the event for promotional purposes, and was designed to give
+          applicants more information about who Expedia Group are and what
+          TravelHack is. The other was designed to be a one-stop-shop for all
+          information during the event. It had a list of expample traveller
+          problems/scenarios to solve, a list of the volunteers helping out and
+          more features.
+        </p>
+        <p class="my-2">
+          The first, promotional website was made using HTML and CSS, with the
+          only JavaScript being for Google Analytics. I was the sole developer
+          of this site, but collaborated with another developer on the design.
+        </p>
+        <p class="my-2">
+          The second, information website was initially created using React.js
+          (with JavaScript) by me and another developer. I have since re-written
+          the site from the ground up, using React.js with TypeScript. This was
+          done in an effort to make the site easily customisable and reuseable
+          for the next iteration of TravelHack.
+        </p>
+        <p class="my-2">
+          To view these websites, please
+          <a href="/#contact" class="underline text-link">get in touch</a>.
+        </p>
+      </div>
+    </main>
+  </body>
+</html>

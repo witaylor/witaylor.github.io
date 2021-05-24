@@ -3,14 +3,31 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Will Taylor</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👋</text></svg>"
+    />
 
     <link rel="stylesheet" href="styles/output.css" />
   </head>
   <body class="font-sans text-lg leading-relaxed">
     <!-- Navigation -->
     <div class="bg-primary-blue min-w-full min-h-128 absolute top-0"></div>
-    <div class="bg-primary-blue-translucent text-white sticky top-0 z-50">
+    <div
+      id="nav-container"
+      class="
+        bg-primary-blue-translucent
+        text-white
+        sticky
+        top-0
+        z-50
+        transition-shadow
+        ease-in-out
+        duration-300
+      "
+    >
       <header class="pt-4 pb-3 px-8 max-w-screen-lg mx-auto">
         <div class="flex items-center">
           <a href="#" class="text-2xl font-bold hidden sm:block">
@@ -18,10 +35,27 @@
           </a>
 
           <nav
-            class="flex flex-1 items-center justify-between min-w-full sm:min-w-0 sm:justify-end list-none pb-1"
+            class="
+              flex flex-1
+              items-center
+              justify-between
+              min-w-full
+              sm:min-w-0
+              sm:justify-end
+              list-none
+              pb-1
+            "
           >
             <li
-              class="sm:ml-8 px-2 pt-1 cursor-pointer rounded hover:bg-blue-300 hover:shadow-sm"
+              class="
+                sm:ml-8
+                px-2
+                pt-1
+                cursor-pointer
+                rounded
+                hover:bg-blue-300
+                hover:shadow-sm
+              "
             >
               <a
                 href="#projects"
@@ -30,14 +64,30 @@
               >
             </li>
             <li
-              class="sm:ml-8 px-2 pt-1 cursor-pointer rounded hover:bg-blue-300 hover:shadow-sm"
+              class="
+                sm:ml-8
+                px-2
+                pt-1
+                cursor-pointer
+                rounded
+                hover:bg-blue-300
+                hover:shadow-sm
+              "
             >
               <a href="#about" onclick="return highlightSection('#about');"
                 ><span class="hidden sm:inline">👋</span> About</a
               >
             </li>
             <li
-              class="sm:ml-8 px-2 pt-1 cursor-pointer rounded hover:bg-blue-300 hover:shadow-sm"
+              class="
+                sm:ml-8
+                px-2
+                pt-1
+                cursor-pointer
+                rounded
+                hover:bg-blue-300
+                hover:shadow-sm
+              "
             >
               <a href="#contact" onclick="return highlightSection('#contact');"
                 ><span class="hidden sm:inline">📱</span> Contact</a
@@ -53,13 +103,30 @@
       <div class="pb-16">
         <div class="max-w-screen-lg mx-auto px-8">
           <div
-            class="flex flex-col md:flex-row md:items-center justify-center py-24 relative"
+            class="
+              flex flex-col
+              md:flex-row
+              md:items-center
+              justify-center
+              py-24
+              relative
+            "
           >
             <!-- https://icons8.com/illustrations/illustration/pale-work-at-home -->
             <img
               src="res/work-at-home.png"
               alt=""
-              class="max-w-2/3 md:max-w-md absolute top-0 left-0 z-0 md:static opacity-75 md:opacity-100"
+              class="
+                max-w-2/3
+                md:max-w-md
+                absolute
+                top-0
+                left-0
+                z-0
+                md:static
+                opacity-75
+                md:opacity-100
+              "
             />
 
             <div class="flex-1 z-10">
@@ -69,26 +136,36 @@
 
               <p class="mb-4">
                 I’m Will, a full-stack developer from the UK 🇬🇧. I create things
-                for the web. On this site you can find out more about me, the
-                things I've made or get in touch.
+                for the web and Apple's platforms, and have a passion for clean,
+                well-tested code. On this site you can find out more about me,
+                the things I've made or get in touch.
               </p>
 
               <p>
                 <!-- Looking for new roles -->
-                Right now,<a
+                <!-- Right now,<a
                   href="resume"
                   class="job-indicator inline-block md:inline rounded bg-job-green pt-2 pb-1 px-2"
                   >I'm looking for a new dev role.</a
-                >
-
-                <!-- Open to offers but not looking -->
-                <!-- <a
-                  class="job-indicator inline-block md:inline rounded pt-2 pb-1 px-2"
-                  >open to offers but not actively looking for a new role.</a
                 > -->
 
+                <!-- Open to offers but not looking -->
+                Right now,<a
+                  class="
+                    job-indicator
+                    inline-block
+                    md:inline
+                    rounded
+                    pt-2
+                    pb-1
+                    px-2
+                  "
+                  >I'm open to offers but not actively looking for a new
+                  role.</a
+                >
+
                 <!-- Not open to job offers -->
-                <!-- <a
+                <!-- Right now,<a
                   class="job-indicator inline-block md:inline rounded bg-job-red pt-2 pb-1 px-2"
                   >I'm not open to job offers.</a
                 > -->
@@ -158,7 +235,18 @@
 
           <div
             data-scroll
-            class="border rounded-lg shadow-lg p-4 my-2 grid gap-4 grid-cols-3 sm:grid-cols-4 md:grid-cols-5"
+            class="
+              border
+              rounded-lg
+              shadow-lg
+              p-4
+              my-2
+              grid
+              gap-4
+              grid-cols-3
+              sm:grid-cols-4
+              md:grid-cols-5
+            "
           >
             <div class="inline-flex flex-col items-center">
               <img
@@ -257,6 +345,59 @@
           </div>
 
           <ul class="min-w-full">
+            <li
+              data-scroll
+              class="
+                border
+                rounded-lg
+                shadow-lg
+                p-4
+                my-2
+                md:min-w-700
+                md:flex
+                md:max-w-80
+                mb-16
+                mr-auto
+              "
+            >
+              <img
+                src="res/projects/diss/stretch-icon.svg"
+                alt="The icon of the Stetch iOS app developed alongside my dissertation"
+                class="self-start mb-8 w-full max-w-128"
+              />
+
+              <div class="md:ml-8">
+                <h3 class="text-2xl font-semibold">Stretch iOS App</h3>
+                <p class="text-base">
+                  A native iOS app designed to prevent discomfort caused by poor
+                  posture when sitting for long periods. The app provides users
+                  with a daily routine of stretches, and uses various persuasive
+                  techniques to motivate them to stretch. Developed as part of
+                  my dissertation, it incorporates feedback from several rounds
+                  of design reviews and an end-user evaluation.
+                </p>
+
+                <a
+                  href="/dissertation/"
+                  class="
+                    block
+                    bg-job-red
+                    text-black
+                    px-4
+                    pt-2
+                    pb-1
+                    rounded
+                    mt-2
+                    md:max-w-50
+                    text-center
+                    ml-auto
+                    hover:opacity-75
+                  "
+                  >Read more</a
+                >
+              </div>
+            </li>
+
             <!-- <li
               data-scroll
               class="border rounded-lg shadow-lg p-4 my-2 md:min-w-700 md:flex md:max-w-80 mb-16"
@@ -287,7 +428,18 @@
             </li> -->
             <li
               data-scroll
-              class="border rounded-lg shadow-lg p-4 my-2 md:min-w-700 md:flex md:max-w-80 mb-16 ml-auto"
+              class="
+                border
+                rounded-lg
+                shadow-lg
+                p-4
+                my-2
+                md:min-w-700
+                md:flex
+                md:max-w-80
+                mb-16
+                ml-auto
+              "
             >
               <img
                 src="res/projects/portfolio.png"
@@ -296,7 +448,7 @@
               />
 
               <div class="md:ml-8">
-                <h3 class="text-3xl font-semibold mb-1">This portfolio</h3>
+                <h3 class="text-2xl font-semibold mb-1">This portfolio</h3>
                 <p class="text-base">
                   The website you're viewing now. A multi-page site initially
                   designed in Figma, and then built using plain HTML, with
@@ -307,76 +459,85 @@
                     class="underline text-link"
                     >Tailwind.css</a
                   >
-                  and a little JavaScript. All animations respect the user's
-                  reduced motion preferences.
+                  and a little JavaScript.
                 </p>
 
-                <!-- <a
-                  href="/projects/JavaScript30.html"
-                  class="block bg-wesbos-yellow text-black px-4 pt-2 pb-1 rounded mt-2 md:max-w-50 text-center ml-auto hover:opacity-75"
+                <a
+                  href="https://github.com/witaylor/witaylor.github.io"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  class="
+                    block
+                    bg-primary-blue
+                    text-white
+                    px-4
+                    pt-2
+                    pb-1
+                    rounded
+                    mt-2
+                    md:max-w-50
+                    text-center
+                    ml-auto
+                    hover:opacity-75
+                  "
                   >View the code</a
-                > -->
+                >
               </div>
             </li>
             <li
               data-scroll
-              class="border rounded-lg shadow-lg p-4 my-2 md:min-w-700 md:flex md:max-w-80 mb-16"
+              class="
+                border
+                rounded-lg
+                shadow-lg
+                p-4
+                my-2
+                md:min-w-700
+                md:flex
+                md:max-w-80
+                mb-16
+              "
             >
               <img
-                src="res/projects/travelhack_logo 1.png"
+                src="res/projects/travelhack/travelhack_logo 1.png"
                 alt="TravelHack logo"
                 class="self-start mb-8 w-full max-w-256 rounded"
               />
 
               <div class="md:ml-8">
-                <h3 class="text-3xl font-semibold mb-1">TravelHack</h3>
+                <h3 class="text-2xl font-semibold">TravelHack</h3>
                 <p class="text-base">
                   TravelHack was a hackathon for students, run by students.
-                  Working closely with recruitment, a small group of interns
-                  planned and ran this hackathon with the aim of hiring the next
-                  group of EG interns. Aside from organising, I created two
-                  websites. One was a promotional site, and the other was a
-                  infosite to be used throughout the event.
-                </p>
-
-                <!-- <a
-                  href="/projects/travelhack.html"
-                  class="block bg-travelhack-blue text-white px-4 pt-2 pb-1 rounded mt-2 md:max-w-50 text-center ml-auto hover:opacity-75"
-                  >View more</a
-                > -->
-              </div>
-            </li>
-
-            <li
-              data-scroll
-              class="border rounded-lg shadow-lg p-4 my-2 md:min-w-700 md:flex md:max-w-80 mb-16 ml-auto"
-            >
-              <img
-                src="res/projects/pt-test-screenshot.png"
-                alt="#JavaScript30, 30 day vanilla javascript coding challenge"
-                class="self-start mb-8 w-full max-w-256 rounded"
-              />
-
-              <div class="md:ml-8">
-                <h3 class="text-3xl font-semibold mb-1">PostureDetect</h3>
-                <p class="text-base">
-                  This is an initial exploration into a potential idea for my
-                  final year university project. It's an app that will allow
-                  users to upload a photo of themselves and then receive a
-                  detailed analysis of their posture. <br />
-                  Right now, you can upload photos and see a estimated skeleton
-                  drawn on to the image, but there is no posture analysis yet.
+                  While at Expedia Group, and working closely with recruitment,
+                  a small group of interns planned and ran this hackathon with
+                  the aim of hiring the next group of EG interns. Aside from
+                  organising, I created two websites. One was a promotional
+                  site, and the other was a infosite to be used throughout the
+                  event.
                 </p>
 
                 <a
-                  href="https://willtaylor.codes/pt-test/"
-                  class="block bg-job-red text-black px-4 pt-2 pb-1 rounded mt-2 md:max-w-50 text-center ml-auto hover:opacity-75"
-                  >View more</a
+                  href="/travelhack"
+                  class="
+                    block
+                    bg-travelhack-blue
+                    text-white
+                    px-4
+                    pt-2
+                    pb-1
+                    rounded
+                    mt-2
+                    md:max-w-50
+                    text-center
+                    ml-auto
+                    hover:opacity-75
+                  "
+                  >Read more</a
                 >
               </div>
             </li>
 
-            <li
+            <!-- <li
               data-scroll
               class="border rounded-lg shadow-lg p-4 my-2 md:min-w-700 md:flex md:max-w-80 mb-16"
             >
@@ -387,7 +548,7 @@
               />
 
               <div class="md:ml-8">
-                <h3 class="text-3xl font-semibold mb-1">The Solar System</h3>
+                <h3 class="text-2xl font-semibold">The Solar System</h3>
                 <p class="text-base">
                   No, I didn’t create the solar system. But I did create a model
                   of it using Three.js. This was part of a second year visual
@@ -396,85 +557,146 @@
                   radiuses.
                 </p>
 
-                <!-- <a
-                  href="/projects/solar-system.html"
+                <a
+                  href="https://willtaylor.codes/solar-system"
+                  target="_blank"
+                  rel="noreferrer noopener"
                   class="block bg-solar-system-blue text-white px-4 pt-2 pb-1 rounded mt-2 md:max-w-50 text-center ml-auto hover:opacity-75"
                   >View more</a
-                > -->
+                >
               </div>
-            </li>
+            </li> -->
           </ul>
         </div>
+      </section>
+
+      <!-- Work experience  -->
+      <section
+        id="work-experience"
+        class="
+          pt-12
+          my-20
+          max-w-screen-lg
+          mx-auto
+        "
+      >
+        <h2 class="font-bold text-4xl shadow-title-white">My Experience</h2>
+
+        <ul>
+          <li
+            data-scroll
+            class="
+              my-2
+              items-start
+              md:min-w-700
+              md:flex
+              border
+              rounded-lg
+              shadow-lg
+              p-4
+            "
+          >
+            <!-- class="bg-expedia-group-blue rounded-lg overflow-hidden flex items-center justify-center" -->
+            <div class="rounded-lg bg-expedia-group-blue p-2 mr-4 max-w-256">
+              <img
+                src="res/Expedia-Group-Logo_E-Stacked.png"
+                alt="Expedia Group Logo"
+                class=""
+              />
+            </div>
+            <div>
+              <h3 class="text-2xl font-semibold">
+                <a
+                  href="https://www.expediagroup.com/"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  class="hover:underline"
+                  >Expedia Group</a
+                >
+              </h3>
+              <p>
+                I was a full-stack developer intern within the Lodging team, working on <a
+                  href="https://www.expedia.com"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  class="text-link underline"
+                  >expedia.com</a
+                > and all other localised sites. We were responsible for the hotel search results and info pages. Over the course of 13 months, I worked on multiple squads, and mainly contributed to backend services.
+              </p>
+
+              <p class="mt-2">
+                In August 2021, I will be returning as a full-stack developer,
+                but this time, in the Checkout team.
+              </p>
+
+              <p class="mt-2">
+                Tech stack:
+                <span class="italic">React, Kotlin, Java, GraphQL, AWS</span>
+              </p>
+              <!-- <a href="/eg" class="underline text-link"
+              >Read more about my experience at EG.</a
+            > -->
+            </div>
+          </li>
+        </ul>
       </section>
 
       <!-- About me -->
       <section
         id="about"
-        class="pt-24 my-20 max-w-screen-lg mx-auto flex items-center flex-col-reverse md:flex-row"
+        class="
+          pt-24
+          my-20
+          max-w-screen-lg
+          mx-auto
+          flex
+          items-center
+          flex-col
+          md:flex-row
+        "
       >
-        <div class="md:mr-12">
-          <h2 class="font-bold text-4xl shadow-title-white">Who am I?</h2>
-          <p>
-            As it says at the top of the page, I’m Will, a computer science
-            student at the
-            <a
-              href="https://www.bath.ac.uk"
-              target="_blank"
-              rel="noreferrer noopener"
-              class="underline text-link"
-              >University of Bath</a
-            >. Alongside coding, my two passions are fitness and music. I love
-            running and going to the gym, and have played the guitar since a
-            young age. I also like to learn as many new things as I can. Right
-            now, the new things are the piano and diving more into front end,
-            accessibility and UI design.
-          </p>
-        </div>
-
         <img
           src="res/me.png"
           alt="Me, in Budapest"
           class="mb-8 md:mb-0 w-full"
         />
-      </section>
-
-      <!-- Work experience  -->
-      <!-- <section
-        id="about"
-        class="pt-24 my-20 max-w-screen-lg mx-auto flex items-center flex-col-reverse md:flex-row"
-      >
-        <h2>Where I've worked</h2>
-        <div
-          data-scroll
-          class="border rounded-lg shadow-lg p-4 my-2 md:min-w-700 md:flex md:max-w-80 mb-16 ml-auto"
-        >
-          Expedia Group
+        <div class="md:ml-12">
+          <h2 class="font-bold text-4xl shadow-title-white">Who am I?</h2>
+          <p>
+            As it says at the top of the page, I’m Will. I've recently graduated from the <a
+              href="https://www.bath.ac.uk"
+              target="_blank"
+              rel="noreferrer noopener"
+              class="underline text-link"
+              >University of Bath</a
+            >, where I studied computer science. Alongside coding, I enjoy weightlifting, and have ambitions to
+            compete in 2021. You can read more about this
+            <a
+              href="/weightlifting"
+              target="_blank"
+              rel="noreferrer noopener"
+              class="underline text-link"
+              >here</a
+            >. I've spent the past year learning Swift for my dissertation project, so, right now, I'm diving back into React.js and Kotlin ready to return to Expedia Group.
+          </p>
         </div>
-      </section> -->
+      </section>
 
       <!-- How to get in touch -->
       <section
         id="contact"
         class="pt-24 max-w-screen-lg mx-auto flex items-center my-20 relative"
       >
-        <img
-          src="res/thumbs-up.png"
-          alt=""
-          class="absolute top-0 right-0 z-0 max-w-40 -translate-y-64 opacity-75 md:opacity-100 md:static md:translate-y-0"
-        />
-
         <div class="md:ml-12 z-10">
           <h2 class="font-bold text-4xl shadow-title-white">
             How to get in touch
           </h2>
-          <p class="mt-2 mb-4">
-            Getting in touch is easy - just use the links below. I'm currently
-            based in Bath while I finish my degree, if you’re in the area let’s
-            grab a coffee - it’s on me.
+          <p class="mt-2 ">
+            Getting in touch is easy - just use the links below. Now I've finished my studies, I'm living back home near Cardiff, 🏴󠁧󠁢󠁷󠁬󠁳󠁿. If you’re in the area let’s grab a coffee - it’s on me.
           </p>
 
-          <ul class="inline-flex my-2">
-            <li class="m-2 mx-4">
+          <ul class="inline-flex my-2 mt-4">
+            <li class="m-2 mx-2 p-2 hover:bg-gray-300 rounded">
               <a
                 href="https://twitter.com/0xWill"
                 target="_blank"
@@ -486,7 +708,7 @@
                   class="max-h-32"
               /></a>
             </li>
-            <li class="m-2 mx-4">
+            <li class="m-2 mx-2 p-2 hover:bg-gray-300 rounded">
               <a
                 href="mailto:will_taylor13@outlook.com"
                 target="_blank"
@@ -498,7 +720,7 @@
                   class="max-h-32"
               /></a>
             </li>
-            <li class="m-2 mx-4">
+            <li class="m-2 mx-2 p-2 hover:bg-gray-300 rounded">
               <a
                 href="https://github.com/witaylor"
                 target="_blank"
@@ -510,7 +732,7 @@
                   class="max-h-32"
               /></a>
             </li>
-            <li class="m-2 mx-4">
+            <li class="m-2 mx-2 p-2 hover:bg-gray-300 rounded">
               <a
                 href="https://www.linkedin.com/in/william-taylor1/"
                 target="_blank"
@@ -524,6 +746,22 @@
             </li>
           </ul>
         </div>
+        <img
+          src="res/thumbs-up.png"
+          alt=""
+          class="
+            absolute
+            top-0
+            right-0
+            z-0
+            max-w-40
+            -translate-y-64
+            opacity-75
+            md:opacity-100
+            md:static
+            md:translate-y-0
+          "
+        />
       </section>
     </main>
 
@@ -534,7 +772,15 @@
         >
           <a
             href="/resume"
-            class="inline-block text-center flex-1 underline text-link mb-4 lg:mb-0"
+            class="
+              inline-block
+              text-center
+              flex-1
+              underline
+              text-link
+              mb-4
+              lg:mb-0
+            "
             >View my resume</a
           >
 
