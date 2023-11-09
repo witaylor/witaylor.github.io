@@ -1,0 +1,23 @@
+{
+  "name": "witaylor.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "tailwind.config.js",
+  "scripts": {
+    "build": "npm-run-all clean build:html build:css build:res build:js",
+    "build:css": "tailwindcss -i ./tailwind.css -o ./dist/styles.css",
+    "build:html": "copyfiles *.html dist/ && copyfiles **/*.html dist/ --exclude 'dist/**' ",
+    "build:res": "copyfiles -u 1 res/* dist/res",
+    "build:js": "copyfiles -u 1 scripts/* dist/scripts",
+    "clean": "rm -rf dist && mkdir dist",
+    "watch:css": "tailwindcss -i ./tailwind.css -o ./styles.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "copyfiles": "^2.4.1",
+    "npm-run-all": "^4.1.5",
+    "tailwindcss": "^3.3.5"
+  }
+}
