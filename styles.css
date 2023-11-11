@@ -638,10 +638,6 @@ a {
   pointer-events: auto;
 }
 
-.\!visible {
-  visibility: visible !important;
-}
-
 .visible {
   visibility: visible;
 }
@@ -666,10 +662,6 @@ a {
   position: absolute;
 }
 
-.\!relative {
-  position: relative !important;
-}
-
 .relative {
   position: relative;
 }
@@ -680,10 +672,6 @@ a {
 
 .-inset-1 {
   inset: -0.25rem;
-}
-
-.end-1 {
-  inset-inline-end: 0.25rem;
 }
 
 .top-0 {
