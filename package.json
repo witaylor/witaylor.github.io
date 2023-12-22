@@ -10,7 +10,7 @@
     "build:res": "copyfiles -u 2 ./src/res/* dist/res",
     "build:js": "copyfiles -u 2 ./src/scripts/* dist/scripts",
     "clean": "rm -rf dist && mkdir dist",
-    "dev": "npm-run-all build watch:css run:dev",
+    "dev": "npm-run-all build:html build:res build:js watch:css run:dev",
     "run:dev": "cd dist/ && live-server --port=8080",
     "watch:css": "tailwindcss -i ./src/tailwind.css -o ./dist/styles.css --watch"
   },
