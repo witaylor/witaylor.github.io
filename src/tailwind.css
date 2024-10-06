@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+
+@layer base {
+  * {
+    @apply font-sans text-zoe-text;
+  }
+
+  h1 {
+    @apply font-serif font-bold tracking-wider text-5xl;
+  }
+
+  a {
+    @apply underline text-blue-800;
+  }
+}
+
+@layer components {
+  .contact-btn {
+    @apply block rounded-lg p-2 no-underline text-center opacity-80 hover:opacity-100 hover:shadow transition-all duration-200;
+  }
+}
