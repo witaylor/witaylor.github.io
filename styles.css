@@ -588,25 +588,6 @@ a {
   }
 }
 
-.contact-btn {
-  display: block;
-  border-radius: 0.5rem;
-  padding: 0.5rem;
-  text-align: center;
-  text-decoration-line: none;
-  opacity: 0.8;
-  transition-property: all;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 200ms;
-}
-
-.contact-btn:hover {
-  opacity: 1;
-  --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
-  --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
 .sr-only {
   position: absolute;
   width: 1px;
@@ -1198,10 +1179,6 @@ a {
 
 .grid-flow-col-dense {
   grid-auto-flow: column dense;
-}
-
-.grid-cols-2 {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .flex-row {
@@ -1844,16 +1821,6 @@ a {
   border-style: none;
 }
 
-.border-zoe-text {
-  --tw-border-opacity: 1;
-  border-color: rgb(45 50 70 / var(--tw-border-opacity));
-}
-
-.bg-\[\#0072C6\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 114 198 / var(--tw-bg-opacity));
-}
-
 .bg-\[\#E1CCA7\] {
   --tw-bg-opacity: 1;
   background-color: rgb(225 204 167 / var(--tw-bg-opacity));
@@ -2167,11 +2134,6 @@ a {
 .text-blue-500 {
   --tw-text-opacity: 1;
   color: rgb(59 130 246 / var(--tw-text-opacity));
-}
-
-.text-white {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .text-zoe-text {
@@ -2561,10 +2523,6 @@ a {
 .hover\:bg-\[\#D4B681\]:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(212 182 129 / var(--tw-bg-opacity));
-}
-
-.hover\:bg-zoe-text\/10:hover {
-  background-color: rgb(45 50 70 / 0.1);
 }
 
 .hover\:font-bold:hover {
