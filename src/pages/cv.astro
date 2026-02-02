@@ -1,0 +1,112 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PostHogLayout from "../layouts/PostHogLayout.astro";
+---
+
+<PostHogLayout>
+  <BaseLayout
+    title="CV | Will Taylor"
+    bodyClass="bg-cream p-5 md:p-10 pt-20 pb-40 flex items-center justify-center min-h-screen cv-page"
+  >
+    <div class="grid gap-10">
+      <div class="grid gap-10">
+        <div class="flex flex-col md:flex-row justify-between">
+          <div>
+            <a
+              href="/"
+              title="Go back home"
+              class="tracking-wider underline text-blue-800 border-b border-blue-800 hover:opacity-80 transition-opacity"
+              >Will Taylor</a
+            >
+            <h1>My CV</h1>
+          </div>
+
+          <div class="hidden md:block">
+            <a
+              href="/res/WillTaylorCV.pdf"
+              download
+              class="plausible-event-name=Download+CV+(Desktop) transition duration-300 shadow-sm hover:shadow-lg rounded-xl px-4 py-2 bg-button-light hover:bg-button-light-hover text-ink no-underline flex items-center gap-2 hover:scale-105"
+              data-posthog-download="desktop"
+            >
+              <div>
+                <img
+                  src="/res/download-icon.png"
+                  class="w-6 h-6"
+                  alt="Download"
+                />
+              </div>
+              <span>Download</span>
+            </a>
+          </div>
+        </div>
+
+        <a
+          href="/res/WillTaylorCV.pdf"
+          class="plausible-event-name=Open+CV"
+          data-posthog-cv-click
+        >
+          <div
+            id="cv-container"
+            data-tilt
+            data-tilt-full-page-listening
+            data-tilt-reverse="true"
+            data-tilt-max="5"
+            data-tilt-speed="200"
+          >
+            <img
+              src="/res/WillTaylorCV.svg"
+              class="rounded-3xl shadow-lg cursor-pointer w-full"
+              alt="Will Taylor CV"
+            />
+          </div>
+        </a>
+      </div>
+
+      <a
+        href="/res/WillTaylorCV.pdf"
+        download
+        class="plausible-event-name=Download+CV+(Mobile) transition-all duration-200 shadow-sm hover:shadow rounded-xl px-8 py-2 bg-button-light hover:bg-button-light-hover text-ink font-medium no-underline flex md:hidden items-center justify-center gap-2 hover:scale-110"
+        data-posthog-download="mobile"
+      >
+        <img src="/res/download-icon.png" class="w-6 h-6" alt="Download" />
+        <span class="text-ink">Download</span>
+      </a>
+    </div>
+
+    <script is:inline src="/scripts/vanilla-tilt.js"></script>
+    <script>
+      import "../scripts/vanilla-tilt-init";
+    </script>
+    <script>
+      function initCvTracking() {
+        // Track CV image click
+        const cvImageLink = document.querySelector("[data-posthog-cv-click]");
+        if (cvImageLink) {
+          cvImageLink.addEventListener("click", () => {
+            if (typeof window !== "undefined" && (window as any).posthog) {
+              (window as any).posthog.capture("cv_image_clicked");
+            }
+          });
+        }
+
+        // Track CV downloads
+        document.querySelectorAll("[data-posthog-download]").forEach((link) => {
+          link.addEventListener("click", (e) => {
+            const target = e.target as HTMLElement;
+            const linkElement = target.closest("[data-posthog-download]");
+            const device = linkElement?.getAttribute("data-posthog-download");
+            if (typeof window !== "undefined" && (window as any).posthog) {
+              (window as any).posthog.capture("cv_downloaded", { device });
+            }
+          });
+        });
+      }
+
+      if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", initCvTracking);
+      } else {
+        initCvTracking();
+      }
+    </script>
+  </BaseLayout>
+</PostHogLayout>

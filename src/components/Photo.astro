@@ -1,0 +1,115 @@
+---
+interface Props {
+  defaultImage: string;
+  altImage: string;
+  defaultAlt: string;
+  altImageAlt: string;
+}
+
+const { defaultImage, altImage, defaultAlt, altImageAlt } = Astro.props;
+---
+
+<div class="mx-2 md:mx-0">
+  <div
+    class="relative rounded-3xl overflow-hidden shadow-lg select-none aspect-video cursor-pointer"
+    data-photo-container
+    style="touch-action: manipulation; -webkit-touch-callout: none;"
+  >
+    <!-- Default image -->
+    <img
+      src={defaultImage}
+      alt={defaultAlt}
+      class="absolute left-0 right-0 top-0 bottom-0 block w-full aspect-video object-cover transition-opacity duration-500 ease-out"
+      data-photo-default
+      draggable="false"
+    />
+
+    <!-- Hover / hold image -->
+    <img
+      src={altImage}
+      alt={altImageAlt}
+      class="absolute left-0 right-0 top-0 bottom-0 w-full object-cover opacity-0 transition-opacity duration-500 ease-out"
+      data-photo-alt
+      draggable="false"
+    />
+  </div>
+</div>
+
+<script>
+  import "../scripts/photo";
+</script>
+
+<style is:inline>
+  /* Container scale transition */
+  [data-photo-container] {
+    transition: transform 300ms ease;
+    will-change: transform;
+    touch-action: manipulation;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+
+  /* Fade timing */
+  [data-photo-default],
+  [data-photo-alt] {
+    transition: opacity 300ms ease;
+    will-change: opacity;
+  }
+
+  /* Default state */
+  [data-photo-default] {
+    opacity: 1;
+  }
+  [data-photo-alt] {
+    opacity: 0;
+  }
+
+  /* Pressed state - scale down on click */
+  [data-photo-container].pressed {
+    transform: scale(0.95);
+  }
+
+  /* Active state - image transition */
+  [data-photo-container].show-alt [data-photo-default] {
+    opacity: 0;
+  }
+  [data-photo-container].show-alt [data-photo-alt] {
+    opacity: 1;
+  }
+
+  /* Hide hint pill when alt image is shown */
+  [data-photo-container].show-alt [data-photo-hint] {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  /* Hint pill styling */
+  [data-photo-hint] {
+    transition: opacity 300ms ease;
+    will-change: opacity;
+  }
+
+  /* Text slide animation */
+  [data-photo-text] {
+    transition:
+      transform 300ms ease,
+      max-height 300ms ease;
+    transform: translateY(-100%);
+    max-height: 0;
+  }
+
+  [data-photo-text].show-alt {
+    transform: translateY(0);
+    max-height: 100px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    [data-photo-container],
+    [data-photo-default],
+    [data-photo-alt],
+    [data-photo-text] {
+      transition: none;
+    }
+  }
+</style>

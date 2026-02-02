@@ -1,0 +1,62 @@
+---
+import type { Link } from "../types/links";
+
+interface Props {
+  links: Link[];
+}
+
+const { links } = Astro.props;
+
+// Default external to true if not specified
+const normalizedLinks = links.map((link) => ({
+  ...link,
+  external: link.external ?? true,
+}));
+---
+
+<div>
+  <h2 class="font-bold uppercase text-sm opacity-75">Useful Links</h2>
+  <div class="grid gap-4">
+    {
+      normalizedLinks.map((link) => (
+        <div>
+          <a
+            href={link.href}
+            target={link.external ? "_blank" : undefined}
+            rel={link.external ? "noopener noreferrer" : "noopener noreferrer"}
+            data-link-text={link.text}
+          >
+            {link.text}
+          </a>
+          <div class="text-sm opacity-75 mt-2">{link.description}</div>
+        </div>
+      ))
+    }
+  </div>
+</div>
+
+<script>
+  // Track CV link clicks
+  function initCvLinkTracking() {
+    document.querySelectorAll("a[data-link-text]").forEach((link) => {
+      link.addEventListener("click", (e) => {
+        const target = e.target as HTMLElement;
+        const linkElement = target.closest("a[data-link-text]");
+        const linkText = linkElement?.getAttribute("data-link-text");
+        if (
+          linkText === "View my CV" &&
+          typeof window !== "undefined" &&
+          (window as any).posthog
+        ) {
+          (window as any).posthog.capture("cv_link_clicked");
+        }
+      });
+    });
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initCvLinkTracking);
+  } else {
+    initCvLinkTracking();
+  }
+</script>
