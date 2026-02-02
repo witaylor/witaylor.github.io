@@ -1,0 +1,63 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="CV | Will Taylor"
+  bodyClass="bg-cream p-5 md:p-10 pt-20 pb-40 flex items-center justify-center min-h-screen cv-page"
+>
+  <div class="grid gap-10">
+    <div class="grid gap-10">
+      <div class="flex flex-col md:flex-row items-center justify-between">
+        <div>
+          <a href="/" title="Go back home" class="tracking-wider underline text-blue-800 border-b border-blue-800 hover:opacity-80 transition-opacity">Will Taylor</a>
+          <h1>My CV</h1>
+        </div>
+
+        <div class="hidden md:block">
+          <a
+            href="/res/WillTaylorCV.pdf"
+            download
+            class="plausible-event-name=Download+CV+(Desktop) transition duration-300 shadow-sm hover:shadow-lg rounded-xl px-4 py-2 bg-button-light hover:bg-button-light-hover text-ink no-underline flex items-center gap-2 hover:scale-105"
+          >
+            <div>
+              <img src="/res/download-icon.png" class="w-6 h-6" alt="Download" />
+            </div>
+            <span>Download</span>
+          </a>
+        </div>
+      </div>
+
+      <a href="/res/WillTaylorCV.pdf" class="plausible-event-name=Open+CV">
+        <div
+          id="cv-container"
+          data-tilt
+          data-tilt-full-page-listening
+          data-tilt-reverse="true"
+          data-tilt-max="5"
+          data-tilt-speed="200"
+        >
+          <img
+            src="/res/WillTaylorCV.svg"
+            class="rounded-3xl shadow-lg cursor-pointer w-full"
+            alt="Will Taylor CV"
+          />
+        </div>
+      </a>
+    </div>
+
+    <a
+      href="/res/WillTaylorCV.pdf"
+      download
+      class="plausible-event-name=Download+CV+(Mobile) transition-all duration-200 shadow-sm hover:shadow rounded-xl px-8 py-2 bg-button-light hover:bg-button-light-hover text-ink font-medium no-underline flex md:hidden items-center justify-center gap-2 hover:scale-110"
+    >
+      <img src="/res/download-icon.png" class="w-6 h-6" alt="Download" />
+      <span class="text-ink">Download</span>
+    </a>
+  </div>
+
+  <script is:inline src="/scripts/vanilla-tilt.js"></script>
+  <script>
+    import "../scripts/vanilla-tilt-init";
+  </script>
+</BaseLayout>

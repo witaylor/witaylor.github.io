@@ -1,0 +1,42 @@
+---
+import CoreTech from "../components/CoreTech.astro";
+import Links from "../components/Links.astro";
+import Photo from "../components/Photo.astro";
+import { coreTechnologies, links } from "../config";
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="Will Taylor | Full stack software engineer"
+  bodyClass="bg-cream flex items-center justify-center min-h-screen"
+>
+  <div class="my-10 pb-20 max-w-xl">
+    <Photo
+      defaultImage="/res/will-taylor.JPG"
+      altImage="/res/will-bike.jpg"
+      defaultAlt="Will Taylor"
+      altImageAlt="Will Taylor cycling"
+    />
+
+    <div class="p-5 md:p-10 mt-10 md:mt-0">
+      <h1 class="text-5xl">Will Taylor</h1>
+
+      <div
+        class="py-3 border-t-[1px] border-b-[1px] border-stone/20 tracking-wide my-5 mb-2"
+      >
+        <p class="block font-bold">A frontend-leaning product engineer.</p>
+      </div>
+
+      <p class="block my-5">
+        I care a lot about building things that just feel good to use. I'm
+        strongest on the frontend, but always happy to work across the stack
+        when it helps ship a better product.
+      </p>
+
+      <div class="grid gap-5 my-5">
+        <CoreTech technologies={coreTechnologies} />
+        <Links links={links} />
+      </div>
+    </div>
+  </div>
+</BaseLayout>

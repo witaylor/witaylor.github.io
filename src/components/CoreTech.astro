@@ -1,0 +1,12 @@
+---
+interface Props {
+  technologies: string[];
+}
+
+const { technologies } = Astro.props;
+---
+
+<div>
+  <h2 class="font-bold uppercase text-sm opacity-75">Core tech</h2>
+  <span>{technologies.join(" • ")}</span>
+</div>
