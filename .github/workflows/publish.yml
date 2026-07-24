@@ -29,7 +29,9 @@ jobs:
         uses: withastro/action@v5
         with:
           node-version: 24
-          package-manager: pnpm@latest
+          # Pin major: pnpm@latest (v11+) ignores lockfile v6 and fails with
+          # ERR_PNPM_IGNORED_BUILDS for esbuild/sharp unless builds are approved.
+          package-manager: pnpm@8
 
   deploy:
     needs: build
